@@ -1,0 +1,936 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+/* Contact Section Styles */
+.contact-section .icon-xl {
+    font-size: 4rem;
+    color: #000;
+}
+
+/* Services Section Styles */
+.services-section .service-image-wrapper {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.services-section .service-image-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.services-section .service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Custom Navbar */
+.custom-navbar {
+    background-color: transparent !important;
+    /* Make it transparent */
+    position: absolute;
+    /* Position over the hero image */
+    width: 100%;
+    z-index: 1000;
+    /* Ensure it's above other content */
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.custom-navbar .navbar-brand {
+    font-size: 2.5rem;
+    /* Adjust Фея logo size */
+    font-weight: 700;
+    /* Bold */
+    letter-spacing: 0.1em;
+}
+
+.custom-navbar .nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-right: 1.5rem;
+    /* Spacing between nav links */
+}
+
+.custom-navbar .btn-outline-light {
+    border-width: 1px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.6rem 1.8rem;
+    white-space: nowrap;
+    /* Prevent button text from wrapping */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    /* Full viewport height */
+    background-color: #be5c3b;
+    /* Base color for the background */
+    overflow: hidden;
+    /* Hide overflowing parts of the image */
+}
+
+.hero-background-image {
+    position: absolute;
+    bottom: 0;
+    /* Position at the bottom */
+    right: 0;
+    /* Position at the right */
+    width: 70%;
+    /* Adjust as needed */
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+    /* Behind the text content */
+    transform: translateX(10%) translateY(0%);
+    /* Fine-tune positioning */
+    pointer-events: none;
+    /* Allow clicks on elements behind the image */
+}
+
+.hero-section .container-fluid {
+    height: 100%;
+    z-index: 2;
+    /* Ensure text is above the image */
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 4.5rem;
+    /* Large heading */
+    line-height: 1.1;
+}
+
+.hero-section p.lead {
+    font-size: 1.3rem;
+    max-width: 500px;
+    /* Limit text width */
+}
+
+.hero-section .btn-outline-light {
+    border-width: 1px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 1.2rem 3rem;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* About Us Section */
+.about-us-section {
+    background-color: #1a1a1a;
+    /* Dark background color */
+    color: #fff;
+    padding-top: 6rem;
+    /* More padding at top */
+    padding-bottom: 6rem;
+    /* More padding at bottom */
+}
+
+.about-us-section .about-us-image {
+    border-radius: 8px;
+    /* Slightly rounded corners for the image */
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Ensure image covers its space */
+    display: block;
+    /* Remove extra space below image */
+}
+
+.about-us-section .text-content {
+    margin-bottom: 3rem;
+    /* Space below the main text block */
+}
+
+.about-us-section small {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+}
+
+.about-us-section h2 {
+    font-size: 3.5rem;
+    /* Large heading size */
+    line-height: 1.1;
+}
+
+.about-us-section p.lead {
+    font-size: 1.15rem;
+}
+
+.about-us-section .stats-grid .h2 {
+    font-size: 2.5rem;
+    /* Larger numbers */
+    margin-bottom: 0.5rem;
+}
+
+.about-us-section .stats-grid p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.about-us-section .stats-grid small {
+    font-size: 0.75rem;
+    letter-spacing: normal;
+}
+
+.about-us-section .btn-outline-light {
+    border-width: 1px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 1.2rem 3rem;
+    margin-top: 2rem;
+    /* Space above the button */
+    transition: all 0.3s ease;
+}
+
+.about-us-section .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Fix an Item Section (White Background) */
+.fix-item-section-light {
+    background-color: #fff;
+    /* White background */
+    color: #000;
+    /* Black text */
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.fix-item-section-light .fix-item-image {
+    border-radius: 8px;
+    /* Slightly rounded corners for the image */
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.fix-item-section-light small {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+}
+
+.fix-item-section-light h2 {
+    font-size: 3.5rem;
+    /* Large heading size */
+    line-height: 1.1;
+}
+
+.fix-item-section-light p.lead {
+    font-size: 1.15rem;
+}
+
+.fix-item-section-light .btn-dark {
+    /* Solid black button */
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 1.2rem 3rem;
+    transition: all 0.3s ease;
+}
+
+.fix-item-section-light .btn-dark:hover {
+    background-color: #333;
+    /* Slightly lighter black on hover */
+    border-color: #333;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+
+    /* Medium devices and down */
+    .custom-navbar .navbar-nav .nav-item {
+        margin-right: 0;
+    }
+
+    .custom-navbar .navbar-brand {
+        margin-left: 0 !important;
+        /* Adjust Фея logo position on smaller screens */
+    }
+
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-section p.lead {
+        font-size: 1.1rem;
+    }
+
+    .hero-background-image {
+        width: 100%;
+        height: 100%;
+        transform: none;
+        object-position: center bottom;
+        /* Adjust object-position for mobile */
+        opacity: 0.5;
+        /* Make it a bit faded on mobile */
+    }
+
+    .hero-section .d-flex.flex-column.flex-sm-row {
+        flex-direction: column !important;
+    }
+
+    .hero-section .btn-outline-light {
+        width: 100%;
+        /* Full width buttons on small screens */
+        padding: 1rem 2rem;
+    }
+
+    .hero-section .btn-outline-light.me-sm-3 {
+        margin-right: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* About Us Section Responsive */
+    .about-us-section .about-us-image {
+        margin-bottom: 2rem;
+        /* Space between image and text on smaller screens */
+    }
+
+    .about-us-section h2 {
+        font-size: 2.8rem;
+    }
+
+    .about-us-section .stats-grid .h2 {
+        font-size: 2rem;
+    }
+
+    .about-us-section .stats-grid .col-md-4 {
+        margin-bottom: 2rem;
+    }
+
+    .about-us-section .stats-grid .col-md-4:last-child {
+        margin-bottom: 0;
+        /* No margin for the last stat column */
+    }
+
+    .about-us-section .btn-outline-light {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Fix an Item Section Responsive */
+    .fix-item-section-light .fix-item-image {
+        margin-bottom: 2rem;
+        /* Space between image and text on smaller screens */
+    }
+
+    .fix-item-section-light h2 {
+        font-size: 2.8rem;
+    }
+
+    .fix-item-section-light p.lead {
+        font-size: 1rem;
+    }
+
+    .fix-item-section-light .btn-dark {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Reset order on smaller screens to default stacking */
+    .fix-item-section-light .col-lg-6.order-lg-1,
+    .fix-item-section-light .col-lg-6.order-lg-0 {
+        order: unset;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    /* Small devices and down */
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-section p.lead {
+        font-size: 1rem;
+    }
+
+    .custom-navbar .navbar-toggler {
+        filter: invert(1);
+        /* Make toggler visible on dark background */
+    }
+
+    .custom-navbar .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.8);
+        /* Dark background for collapsed menu */
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .custom-navbar .nav-link,
+    .custom-navbar .btn-outline-light {
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* About Us Section Small Devices */
+    .about-us-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-us-section p.lead {
+        font-size: 1rem;
+    }
+
+    .about-us-section .stats-grid .h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Fix an Item Section Small Devices */
+    .fix-item-section-light h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Centering for all sections on mobile */
+    .hero-section .row,
+    .about-us-section .row,
+    .fix-item-section-light .row,
+    .testimonials-section .row,
+    .main-footer .row {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-section .d-flex {
+        justify-content: center;
+    }
+
+    .about-us-section .col-lg-6 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us-section .btn-outline-light {
+        align-self: center !important;
+    }
+
+    .testimonials-section .testimonial-card {
+        text-align: center;
+        align-items: center;
+    }
+
+    .testimonials-section .btn-dark,
+    .testimonials-section .btn-outline-dark {
+        width: 100%;
+        text-align: center;
+        display: block;
+        /* Ensure they stack */
+    }
+
+    .testimonials-section .btn-dark {
+        margin-bottom: 1rem;
+        /* Add spacing between buttons */
+        margin-right: 0 !important;
+        /* Remove horizontal margin */
+    }
+
+    .main-footer .col-lg-3,
+    .main-footer .col-lg-2,
+    .main-footer .col-lg-1 {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-footer .text-lg-end {
+        text-align: center !important;
+    }
+}
+
+/* Specific adjustments for larger screens (e.g., image height) */
+@media (min-width: 992px) {
+
+    /* Large devices and up */
+    .about-us-section .about-us-image {
+        height: 600px;
+        /* Example fixed height for large screens */
+    }
+
+    .fix-item-section-light .fix-item-image {
+        height: 550px;
+        /* Example fixed height for large screens */
+    }
+}
+
+/* (Keep previous CSS rules for Hero, About Us, Fix an Item here) */
+
+/* How It Works Section */
+.how-it-works-section {
+    background-color: #f8f8f8;
+    /* Very light gray to distinguish from pure white content if any */
+    color: #000;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.how-it-works-section h2 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    /* Lighter font weight for the main heading */
+    margin-bottom: 3rem;
+}
+
+.how-it-works-section .icon-xl {
+    font-size: 3.5rem;
+    /* Large icon size */
+    color: #000;
+    /* Black icon color */
+    display: inline-block;
+    /* Ensure vertical alignment */
+}
+
+.how-it-works-section .h4 {
+    font-size: 1.5rem;
+    /* Size for sub-headings like "Get Your Quote" */
+}
+
+.how-it-works-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 300px;
+    /* Limit paragraph width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.how-it-works-section .link-arrow {
+    text-decoration: none;
+    /* Remove default underline */
+    color: #000 !important;
+    /* Ensure link is black */
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.how-it-works-section .link-arrow:hover {
+    color: #555 !important;
+    /* Slightly lighter on hover */
+    text-decoration: underline;
+    /* Add underline on hover */
+}
+
+.how-it-works-section .link-arrow i {
+    vertical-align: middle;
+    /* Align arrow with text */
+    font-size: 1.1em;
+    margin-left: 0.25rem;
+}
+
+.how-it-works-section .how-it-works-logo {
+    max-height: 30px;
+    /* Max height for logos */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Responsive adjustments for How It Works Section */
+@media (max-width: 991.98px) {
+
+    /* Medium devices and down */
+    .how-it-works-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .how-it-works-section .col-lg-4 {
+        margin-bottom: 3rem;
+        /* Space between columns when stacked */
+    }
+
+    .how-it-works-section .col-lg-4:last-child {
+        margin-bottom: 0;
+        /* No margin for the very last column */
+    }
+
+    .how-it-works-section .how-it-works-logo {
+        max-height: 40px;
+        /* Slightly larger logos on smaller screens if needed */
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    /* Small devices and down */
+    .how-it-works-section h2 {
+        font-size: 2rem;
+    }
+
+    .how-it-works-section .h4 {
+        font-size: 1.3rem;
+    }
+
+    .how-it-works-section .icon-xl {
+        font-size: 3rem;
+    }
+
+    .how-it-works-section p {
+        font-size: 0.9rem;
+    }
+}
+
+/* (Keep previous CSS rules for Hero, About Us, Fix an Item, How It Works here) */
+
+/* What Customers Say Section (Testimonials) */
+.testimonials-section {
+    background-color: #fff;
+    color: #000;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.testimonials-section .testimonials-heading {
+    font-family: 'Playfair Display', serif;
+    /* Custom font for this heading */
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.testimonials-section .testimonial-card {
+    /* No visible border or background in the screenshot, just spacing */
+    /* Add padding for internal spacing */
+    padding: 1.5rem;
+    height: 100%;
+    /* Ensure cards are same height if content varies slightly */
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonials-section .stars i {
+    color: #8c8cff;
+    /* Purple color for stars */
+    font-size: 1.5rem;
+    margin-right: 0.2rem;
+}
+
+.testimonials-section .testimonial-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    /* Allows text to take up available space, pushing name/date to bottom */
+}
+
+.testimonials-section strong {
+    font-size: 1.1rem;
+    font-weight: 700;
+    /* Bold for name */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.testimonials-section small {
+    font-size: 0.9rem;
+    color: #777;
+    /* Slightly darker muted color for date */
+}
+
+.testimonials-section .btn-dark {
+    /* Solid black button, similar to the "Fix an Item" button */
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 1.2rem 3rem;
+    transition: all 0.3s ease;
+}
+
+.testimonials-section .btn-dark:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+
+/* Responsive adjustments for Testimonials Section */
+@media (max-width: 991.98px) {
+
+    /* Medium devices and down */
+    .testimonials-section .testimonials-heading {
+        font-size: 2.8rem;
+    }
+
+    .testimonials-section .col-md-6 {
+        margin-bottom: 2rem;
+        /* Spacing between cards when they stack (2 per row on md) */
+    }
+
+    .testimonials-section .col-md-6:nth-last-child(-n+2) {
+        /* No bottom margin for the last two in a 2-col layout */
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    /* Small devices and down */
+    .testimonials-section .testimonials-heading {
+        font-size: 2.2rem;
+    }
+
+    .testimonials-section .col-md-6 {
+        margin-bottom: 2rem;
+        /* All columns stack, so reset margin */
+    }
+
+    .testimonials-section .testimonial-card {
+        padding: 1rem;
+    }
+
+    .testimonials-section .btn-dark {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* (Keep all previous CSS rules for Hero, About Us, Fix an Item, How It Works, Testimonials here) */
+
+/* Footer Section */
+.main-footer {
+    background-color: #1a1a1a;
+    /* Dark background color */
+    color: #fff;
+    padding-top: 5rem;
+    /* Adjust padding as needed */
+    padding-bottom: 5rem;
+}
+
+.main-footer .btn-light {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.main-footer .btn-light:hover {
+    background-color: #f0f0f0;
+    border-color: #f0f0f0;
+}
+
+.main-footer .payment-icons img {
+    max-height: 25px;
+    /* Adjust height of payment icons */
+    width: auto;
+    object-fit: contain;
+    filter: invert(1);
+    /* Invert colors to make them white on dark background if they are black originally */
+}
+
+.main-footer .footer-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.7);
+    /* Slightly muted white for headings */
+}
+
+.main-footer .footer-links li {
+    margin-bottom: 0.7rem;
+}
+
+.main-footer .footer-links a {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    /* Muted white for links */
+    transition: color 0.2s ease;
+}
+
+.main-footer .footer-links a:hover {
+    color: #fff;
+    /* White on hover */
+}
+
+.main-footer .social-icons .icon-md {
+    font-size: 1.8rem;
+    /* Size for social icons */
+    color: #fff;
+    transition: color 0.2s ease;
+}
+
+.main-footer .social-icons a:hover .icon-md {
+    color: rgba(255, 255, 255, 0.7);
+    /* Muted white on hover */
+}
+
+.main-footer .the-seam-logo {
+    font-family: 'Playfair Display', serif;
+    /* Use Playfair Display for "Фея" */
+    font-size: 2.2rem;
+    /* Adjust size */
+    font-weight: 400;
+    /* Lighter weight if needed */
+    color: #fff;
+}
+
+
+/* Responsive adjustments for Footer */
+@media (max-width: 991.98px) {
+
+    /* Medium devices and down */
+    .main-footer .col-lg-3,
+    .main-footer .col-lg-2,
+    .main-footer .col-lg-1 {
+        margin-bottom: 2rem;
+        /* Space between columns when they stack */
+    }
+
+    .main-footer .col-lg-3:last-child,
+    .main-footer .col-lg-2:last-child,
+    .main-footer .col-lg-1:last-child {
+        margin-bottom: 0;
+        /* No margin for the last column in the row */
+    }
+
+    .main-footer .text-lg-end {
+        text-align: left !important;
+        /* Align social icons/logo left on smaller screens */
+    }
+
+    .main-footer .social-icons {
+        margin-top: 1.5rem;
+        /* Space above social icons if they move to a new row */
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    /* Small devices and down */
+    .main-footer .btn-light {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 2rem;
+    }
+
+    .main-footer .payment-icons {
+        justify-content: center;
+        /* Center payment icons on small screens */
+        margin-top: 1.5rem;
+    }
+
+    .main-footer .footer-heading {
+        margin-top: 1.5rem;
+        /* Space above headings when stacked */
+    }
+
+    .main-footer .social-icons {
+        text-align: center !important;
+        /* Ensure social icons are centered */
+    }
+
+    .main-footer .the-seam-logo {
+        text-align: center !important;
+        /* Ensure "Фея" logo is centered */
+        font-size: 1.8rem;
+    }
+}
+
+/* (Остальные CSS-стили из предыдущих ответов) */
+
+/* Language Switcher Styling */
+.navbar-nav .dropdown-menu-dark {
+    background-color: #343a40;
+    /* Darker background for dropdown */
+    border-color: #495057;
+}
+
+.navbar-nav .dropdown-menu-dark .dropdown-item {
+    color: #fff;
+    /* White text for dropdown items */
+}
+
+.navbar-nav .dropdown-menu-dark .dropdown-item:hover,
+.navbar-nav .dropdown-menu-dark .dropdown-item:focus {
+    background-color: #495057;
+    /* Slightly lighter background on hover/focus */
+    color: #fff;
+}
+
+#current-language-display {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Booking Modal Styles */
+#timeSlotsContainer .btn-outline-dark {
+    min-width: 80px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+#timeSlotsContainer .btn-outline-dark:hover,
+#timeSlotsContainer .btn-outline-dark.active {
+    background-color: #000;
+    color: #fff;
+}
+
+#timeSlotsContainer .btn-check:checked+.btn-outline-dark {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+/* Success View Styles */
+.success-icon i {
+    color: #198754 !important;
+    /* Bootstrap success color */
+}
+
+/* FAQ Section Styles */
+.faq-section .accordion-button:not(.collapsed) {
+    background-color: #e2e6ea;
+    /* Light grayish color */
+    color: #000;
+    /* Black text */
+    box-shadow: none;
+    /* Remove blue glow */
+}
+
+.faq-section .accordion-button:focus {
+    box-shadow: none;
+    /* Remove focus shadow */
+    border-color: rgba(0, 0, 0, .125);
+}
+
+.faq-section .accordion-button {
+    color: #000;
+    /* Ensure text is black in collapsed state too */
+    font-weight: 600;
+}

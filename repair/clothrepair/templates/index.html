@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="page_title">Фея | Пошиття та ремонт одягу з доставкою</title>
+    <link rel="icon" type="image/png" href="../static/img/logos.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid px-md-5">
+            <!-- Mobile: Brand on the left -->
+            <a class="navbar-brand text-white me-auto d-lg-none" href="#" data-key="navbar_brand">Фея</a>
+
+            <!-- Mobile: Actions (Lang + Button) on the right -->
+            <div class="d-flex align-items-center d-lg-none gap-2">
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <span id="current-language-display-mobile">UK</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                        <li><a class="dropdown-item language-switcher" href="#" data-lang="en">English</a></li>
+                        <li><a class="dropdown-item language-switcher" href="#" data-lang="uk">Українська</a></li>
+                        <li><a class="dropdown-item language-switcher" href="#" data-lang="ru">Русский</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center"
+                    href="tel:+380974246003" style="width: 40px; height: 40px;">
+                    <i class="ri-phone-fill fs-5"></i>
+                </a>
+            </div>
+
+            <!-- Desktop Toggler (Hidden) -->
+            <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Desktop Content -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#mission" data-key="nav_mission">Місія</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contact" data-key="nav_contact">Контакти</a>
+                    </li>
+                </ul>
+                <a class="navbar-brand text-white mx-lg-auto d-none d-lg-block" href="#" data-key="navbar_brand">Фея</a>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item me-lg-2 mb-2 mb-lg-0">
+                        <a class="btn btn-outline-light rounded-pill px-4" href="#" data-key="nav_fix_item_btn"
+                            data-bs-toggle="modal" data-bs-target="#bookingModal">Замовити ремонт</a>
+                    </li>
+                    <li class="nav-item me-lg-3 mb-2 mb-lg-0">
+                        <a class="btn btn-outline-light rounded-pill px-4" href="#contact"
+                            data-key="nav_partner_with_us_btn">Співпраця</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="current-language-display">UK</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item language-switcher" href="#" data-lang="en">English</a></li>
+                            <li><a class="dropdown-item language-switcher" href="#" data-lang="uk">Українська</a></li>
+                            <li><a class="dropdown-item language-switcher" href="#" data-lang="ru">Русский</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-white d-flex align-items-center">
+        <div class="container-fluid px-md-5 position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-8">
+                    <h1 class="display-3 fw-bold mb-3" data-key="hero_title">Ваш партнер у змінах</h1>
+                    <p class="lead mb-4" data-key="hero_description">Вирішуємо проблеми модної індустрії, забезпечуючи
+                        онлайн пошиття та ремонт.</p>
+                    <div class="d-flex flex-column flex-sm-row">
+                        <a href="#" class="btn btn-outline-light rounded-pill px-5 py-3 me-sm-3 mb-3 mb-sm-0"
+                            data-key="hero_fix_item_btn" data-bs-toggle="modal"
+                            data-bs-target="#bookingModal">Відремонтувати</a>
+                        <a href="#contact" class="btn btn-outline-light rounded-pill px-5 py-3"
+                            data-key="hero_partner_with_us_btn">Співпраця</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-4 d-none d-md-block">
+                </div>
+            </div>
+        </div>
+        <img src="https://cdn.prod.website-files.com/63c02f6a62a8a9ed3f9108d9/65d4deb6b9e03b09ce408066_SOJO%20rip%201-min%20(2)%20(1)%20(1).png"
+            alt="Person lifting ripped shirt over their head" class="hero-background-image d-none d-md-block">
+    </header>
+
+    <section id="contact" class="contact-section py-5 bg-light">
+        <div class="container-fluid px-md-5">
+            <h2 class="text-center mb-5 fw-bold" data-key="contact_section_title">Зв'язатися з нами</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row g-4 text-center">
+                        <div class="col-md-3">
+                            <div class="contact-item">
+                                <i class="ri-phone-line icon-xl mb-3 text-dark"></i>
+                                <h4 class="h5 fw-bold" data-key="contact_phone_title">Телефон</h4>
+                                <p class="mb-1"><a href="tel:+380974246003" class="text-decoration-none text-muted">097
+                                        424 60 03</a></p>
+                                <p><a href="tel:+380506921732" class="text-decoration-none text-muted">050 692 17 32</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="contact-item">
+                                <i class="ri-mail-line icon-xl mb-3 text-dark"></i>
+                                <h4 class="h5 fw-bold" data-key="contact_email_title">Email</h4>
+                                <p><a href="mailto:ateliefeia@gmail.com"
+                                        class="text-decoration-none text-muted">ateliefeia@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="contact-item">
+                                <i class="ri-time-line icon-xl mb-3 text-dark"></i>
+                                <h4 class="h5 fw-bold" data-key="contact_hours_title">Графік роботи</h4>
+                                <p class="mb-1 text-muted" data-key="contact_hours_weekdays">Пн - Пт: 10:00 - 19:00</p>
+                                <p class="mb-1 text-muted" data-key="contact_hours_saturday">Сб: 10:00 - 17:00</p>
+                                <p class="mb-0 text-muted" data-key="contact_hours_sunday">Неділя: Вихідний</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="contact-item">
+                                <i class="ri-chat-1-line icon-xl mb-3 text-dark"></i>
+                                <h4 class="h5 fw-bold" data-key="contact_social_title">Соцмережі</h4>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <a href="https://t.me/+380506921732" target="_blank" class="text-dark"><i
+                                            class="ri-telegram-fill fs-4"></i></a>
+                                    <a href="viber://chat?number=%2B380974246003" target="_blank" class="text-dark"><i
+                                            class="fab fa-viber fs-4" style="position: relative; top: 5px;"></i></a>
+                                    <a href="https://wa.me/380974246003" target="_blank" class="text-dark"><i
+                                            class="ri-whatsapp-fill fs-4"></i></a>
+                                    <a href="https://instagram.com/ateliefeia" target="_blank" class="text-dark"><i
+                                            class="ri-instagram-line fs-4"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5">
+                        <button type="button" class="btn btn-dark rounded-pill px-5 py-3 fw-bold" data-bs-toggle="modal"
+                            data-bs-target="#quoteModal" data-key="contact_get_quote_btn">Отримати оцінку</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section pb-5 bg-light">
+        <div class="container-fluid px-0">
+            <iframe src="https://maps.google.com/maps?q=50.4573563,30.363001&z=17&output=embed" width="100%"
+                height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section id="services" class="services-section py-5">
+        <div class="container-fluid px-md-5">
+            <h2 class="text-center mb-5 fw-bold" data-key="services_section_title">Наші послуги</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 mb-4 text-center">
+                    <h3 class="h4 fw-bold mb-3" data-key="service_1_title">Ремонт одягу</h3>
+                    <div class="service-image-wrapper mb-3">
+                        <img src="../static/img/service_repair.png" alt="Repair"
+                            class="img-fluid rounded-circle service-image">
+                    </div>
+                    <p class="text-muted" data-key="service_1_desc">Ремонт розривів, заміна блискавок та гудзиків.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 text-center">
+                    <h3 class="h4 fw-bold mb-3" data-key="service_2_title">Підгін по фігурі</h3>
+                    <div class="service-image-wrapper mb-3">
+                        <img src="../static/img/service_alterations.png" alt="Alterations"
+                            class="img-fluid rounded-circle service-image">
+                    </div>
+                    <p class="text-muted" data-key="service_2_desc">Ідеальна посадка вашого улюбленого одягу.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 text-center">
+                    <h3 class="h4 fw-bold mb-3" data-key="service_3_title">Реставрація</h3>
+                    <div class="service-image-wrapper mb-3">
+                        <img src="../static/img/service_restoration.png" alt="Restoration"
+                            class="img-fluid rounded-circle service-image">
+                    </div>
+                    <p class="text-muted" data-key="service_3_desc">Відновлення вінтажних та пошкоджених речей.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 text-center">
+                    <h3 class="h4 fw-bold mb-3" data-key="service_4_title">Індивідуальне пошиття</h3>
+                    <div class="service-image-wrapper mb-3">
+                        <img src="../static/img/service_custom.png" alt="Custom Tailoring"
+                            class="img-fluid rounded-circle service-image">
+                    </div>
+                    <p class="text-muted" data-key="service_4_desc">Створення унікального одягу за вашими мірками.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mission" class="about-us-section py-5">
+        <div class="container-fluid px-md-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="https://cdn.prod.website-files.com/63c02f6a62a8a9ed3f9108d9/65ce2e845cc7927f225bd0f9_b31bccd391006a5c866e75f2c6ca1b12.jpg"
+                        alt="About Us Image" class="img-fluid about-us-image">
+                </div>
+                <div class="col-lg-6 d-flex flex-column justify-content-between py-4 py-lg-0">
+                    <div class="text-content">
+                        <small class="text-uppercase text-white-50 fw-bold mb-2 d-block"
+                            data-key="about_us_small_heading">Про нас</small>
+                        <h2 class="display-4 fw-bold text-white mb-4" data-key="about_us_main_heading">Наша місія —
+                            змінити індустрію моди</h2>
+                        <p class="lead text-white-50 mb-5" data-key="about_us_description">Ми живемо у світі, де
+                            "виробництво-використання-відходи" є нормою. Фея тут, щоб змінити це. Наша місія — зменшити
+                            негативний вплив моди, зробивши ремонт одягу мейнстрімом та переосмисливши цінність нашого
+                            одягу.</p>
+                    </div>
+                    <div class="row stats-grid">
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <h3 class="h2 fw-bold text-white">13 million</h3>
+                            <p class="text-white-50 mb-0" data-key="stat_1_text">предметів одягу викидається на звалище
+                                щотижня в Україні.</p>
+                            <small class="text-white-50" data-key="stat_1_source">Oxfam</small>
+                        </div>
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <h3 class="h2 fw-bold text-white">46%</h3>
+                            <p class="text-white-50 mb-0" data-key="stat_2_text">повернень одягу пов'язані з поганою
+                                посадкою.</p>
+                            <small class="text-white-50" data-key="stat_2_source">Harris Poll</small>
+                        </div>
+                        <div class="col-md-4">
+                            <h3 class="h2 fw-bold text-white">$400 billion</h3>
+                            <p class="text-white-50 mb-0" data-key="stat_3_text">вартості одягу викидається передчасно
+                                по всьому світу</p>
+                            <small class="text-white-50" data-key="stat_3_source">EOS intelligence</small>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline-light rounded-pill px-5 py-3 mt-5 align-self-start"
+                        data-key="about_us_learn_more_btn">Дізнатися більше</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fix-item-section-light py-5">
+        <div class="container-fluid px-md-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1">
+                    <img src="https://cdn.prod.website-files.com/63c02f6a62a8a9ed3f9108d9/65ce43b42010cf743778ba0f_SojoXUM2289%20final%20copy%207.png"
+                        alt="Person wearing ripped pants" class="img-fluid fix-item-image">
+                </div>
+                <div class="col-lg-6 order-lg-0 py-4 py-lg-0">
+                    <small class="text-uppercase text-muted fw-bold mb-2 d-block"
+                        data-key="fix_item_small_heading">Відремонтувати</small>
+                    <h2 class="display-4 fw-bold text-dark mb-4" data-key="fix_item_main_heading">Маєте річ, яка
+                        потребує ремонту?</h2>
+                    <p class="lead text-dark-50 mb-5" data-key="fix_item_description">Замовляйте ремонт онлайн, не
+                        виходячи з дому, або приходьте особисто до нашої концесії Selfridges.</p>
+                    <a href="#" class="btn btn-dark rounded-pill px-5 py-3" data-key="fix_item_btn"
+                        data-bs-toggle="modal" data-bs-target="#bookingModal">Відремонтувати</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <section id="faq" class="faq-section py-5 bg-dark">
+        <div class="container-fluid px-md-5">
+            <h2 class="text-center mb-5 fw-bold text-white" data-key="faq_section_title">Часті запитання</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                                    data-key="faq_q1">
+                                    Скільки часу займає ремонт?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-key="faq_a1">
+                                    Зазвичай ремонт займає від 1 до 3 днів, залежно від складності.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                    data-key="faq_q2">
+                                    Ви працюєте зі шкірою та хутром?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-key="faq_a2">
+                                    Так, ми маємо спеціалізоване обладнання та майстрів для роботи зі шкірою та хутром.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                                    data-key="faq_q3">
+                                    Як формується ціна?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-key="faq_a3">
+                                    Ціна залежить від складності роботи та необхідних матеріалів. Ви можете отримати
+                                    попередню оцінку онлайн.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+                                    data-key="faq_q4">
+                                    Чи можу я принести свою фурнітуру?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-key="faq_a4">
+                                    Так, звичайно. Ви можете принести свої гудзики, блискавки або тканину, або ми
+                                    підберемо їх для вас.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works-section py-5">
+        <div class="container-fluid px-md-5">
+            <h2 class="display-4 fw-bold text-dark text-center mb-5 pb-3" data-key="how_it_works_main_heading">Як це
+                працює</h2>
+            <div class="row text-center">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <i class="ri-wallet-3-line icon-xl mb-4"></i>
+                    <h3 class="h4 fw-bold text-dark mb-3" data-key="how_it_works_quote_title">Отримайте оцінку</h3>
+                    <p class="text-muted mb-4" data-key="how_it_works_quote_description">Зв'яжіться з надійним майстром
+                        та отримайте чітку оцінку послуги.</p>
+                    <a href="#" class="text-dark fw-bold text-decoration-underline link-arrow"
+                        data-key="how_it_works_quote_link" data-bs-toggle="modal" data-bs-target="#priceListModal">
+                        Переглянути прайс-лист <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <i class="ri-shopping-bag-line icon-xl mb-4"></i>
+
+                    <h3 class="h4 fw-bold text-dark" data-key="how_it_works_dropoff_title">Виберіть місце здачі
+                    </h3>
+                    <span class="badge bg-warning text-dark rounded-pill mb-3" data-key="dropoff_coming_soon">Скоро /
+                        Coming Soon</span>
+                    <p class="text-muted mb-4" data-key="how_it_works_dropoff_description">Здайте речі місцевому майстру
+                        або виберіть бажану поштову службу. (По всій Україні)</p>
+                    <div class="d-flex justify-content-center align-items-center flex-column mt-4">
+                        <div class="d-flex gap-3 mb-2">
+                            <img src="../static/img/Glovo_logo.png" alt="Glovo Logo" class="how-it-works-logo">
+                            <img src="../static/img/np_logo.png" alt="Nova Poshta Logo" class="how-it-works-logo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <i class="ri-heart-line icon-xl mb-4"></i>
+                    <h3 class="h4 fw-bold text-dark mb-3" data-key="how_it_works_ready_title">Готово до носіння</h3>
+                    <p class="text-muted mb-4" data-key="how_it_works_ready_description">Речі повертаються за кілька
+                        днів, відреставровані та готові до багаторазового використання.</p>
+                    <a href="#" class="text-dark fw-bold text-decoration-underline link-arrow"
+                        data-key="how_it_works_ready_link">
+                        Переглянути Instagram для натхнення <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="testimonials-section py-5">
+        <div class="container-fluid px-md-5">
+            <h2 class="testimonials-heading text-center mb-5 pb-3" data-key="testimonials_main_heading">Що кажуть
+                клієнти</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card p-4">
+                        <div class="stars mb-3">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text text-dark mb-4" data-key="testimonial_1_text">"Я вже двічі
+                            користувалася послугами Фея для ремонту одягу... абсолютно в захваті від їхньої роботи, яка
+                            зробила речі як нові!"</p>
+                        <strong class="text-dark d-block mb-1" data-key="testimonial_1_author">ОЛЕНА К.</strong>
+                        <small class="text-muted" data-key="testimonial_1_date">Квітень 2025</small>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card p-4">
+                        <div class="stars mb-3">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text text-dark mb-4" data-key="testimonial_2_text">"Майстерність була
+                            абсолютно бездоганною – ви майже не помітите жодних слідів ремонту, і моє пальто виглядає як
+                            нове!"</p>
+                        <strong class="text-dark d-block mb-1" data-key="testimonial_2_author">МАРІЯ П.</strong>
+                        <small class="text-muted" data-key="testimonial_2_date">Вересень 2024</small>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card p-4">
+                        <div class="stars mb-3">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <p class="testimonial-text text-dark mb-4" data-key="testimonial_3_text">"Оксана чудово
+                            вкоротила кілька пар штанів. Дуже допомогла і швидко. Для невисокої людини це так чудово
+                            мати місцевий сервіс пошиття!"</p>
+                        <strong class="text-dark d-block mb-1" data-key="testimonial_3_author">НАТАЛІЯ І.</strong>
+                        <small class="text-muted" data-key="testimonial_3_date">Серпень 2024</small>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-dark rounded-pill px-5 py-3 me-3 fw-bold"
+                    data-key="testimonials_read_more_btn">Читати більше відгуків</a>
+                <button type="button" class="btn btn-outline-dark rounded-pill px-5 py-3 fw-bold" data-bs-toggle="modal"
+                    data-bs-target="#reviewModal" data-key="testimonials_add_review_btn">Додати відгук</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="main-footer py-5 text-white">
+        <div class="container-fluid px-md-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 d-flex flex-column justify-content-between">
+                    <div>
+                        <a href="#" class="btn btn-light rounded-pill px-5 py-3 fw-bold mb-4"
+                            data-key="footer_book_now_btn">Замовити</a>
+                    </div>
+                    <div class="d-flex align-items-center payment-icons">
+                        <i class="fab fa-cc-apple-pay footer-payment-icon me-2"></i>
+                        <i class="fab fa-cc-visa footer-payment-icon me-2"></i>
+                        <i class="fab fa-cc-mastercard footer-payment-icon me-2"></i>
+                        <i class="fab fa-google-pay footer-payment-icon"></i>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading mb-3" data-key="footer_about_us_heading">Про нас</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#" class="text-decoration-none text-white-50" data-key="footer_for_business">Для
+                                бізнесу</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50" data-key="footer_for_makers">Для
+                                майстрів</a></li>
+                        <li><a href="#contact" class="text-decoration-none text-white-50"
+                                data-key="footer_contact_us">Зв'язатися з нами</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading mb-3" data-key="footer_for_customers_heading">Для клієнтів</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#" class="text-decoration-none text-white-50" data-key="footer_pricing_guide"
+                                data-bs-toggle="modal" data-bs-target="#priceListModal">Прайс-лист</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50" data-key="footer_get_quote"
+                                data-bs-toggle="modal" data-bs-target="#quoteModal">Отримати
+                                оцінку за 48 год</a></li>
+                        <li><a href="#faq" class="text-decoration-none text-white-50" data-key="footer_faqs">Часті
+                                запитання</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading mb-3" data-key="footer_care_studies_heading">Кейси</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#" class="text-decoration-none text-white-50"
+                                data-key="footer_knitwear_repair">Невидимий ремонт трикотажу</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50"
+                                data-key="footer_leather_repair">Ремонт шкіряного взуття</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50"
+                                data-key="footer_handbag_restoration">Реставрація сумок</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="col-lg-1 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading mb-3" data-key="footer_legal_heading">Правові питання</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#" class="text-decoration-none text-white-50" data-key="footer_terms">Умови</a>
+                        </li>
+                        <li><a href="#" class="text-decoration-none text-white-50"
+                                data-key="footer_privacy">Конфіденційність</a>
+                        </li>
+                    </ul>
+                </div> -->
+
+                <div class="col-lg-2 col-md-6 text-lg-end">
+                    <div class="social-icons mb-4">
+                        <a href="https://instagram.com/ateliefeia" target="_blank" class="text-white me-3"><i
+                                class="ri-instagram-line icon-md"></i></a>
+                        <a href="https://t.me/+380506921732" target="_blank" class="text-white me-3"><i
+                                class="ri-telegram-fill icon-md"></i></a>
+                        <a href="viber://chat?number=%2B380974246003" target="_blank" class="text-white me-3"><i
+                                class="fab fa-viber icon-md"></i></a>
+                        <a href="https://wa.me/380974246003" target="_blank" class="text-white"><i
+                                class="ri-whatsapp-fill icon-md"></i></a>
+                    </div>
+                    <h4 class="the-seam-logo display-6 fw-normal" data-key="footer_the_seam_logo">Фея</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="bookingModalLabel" data-key="booking_modal_title">Замовити
+                        ремонт</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm">
+                        <div class="mb-4">
+                            <label for="bookingDate" class="form-label fw-bold" data-key="booking_date_label">Оберіть
+                                дату</label>
+                            <input type="date" class="form-control" id="bookingDate" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold" data-key="booking_time_label">Оберіть час</label>
+                            <div id="timeSlotsContainer" class="d-flex flex-wrap gap-2">
+                                <p class="text-muted small" data-key="booking_select_date_first">Будь ласка, спочатку
+                                    оберіть дату.</p>
+                            </div>
+                            <input type="hidden" id="selectedTimeSlot" name="timeSlot" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="customerName" class="form-label fw-bold" data-key="booking_name_label">Ваше
+                                ім'я</label>
+                            <input type="text" class="form-control" id="customerName" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="customerPhone" class="form-label fw-bold" data-key="booking_phone_label">Номер
+                                телефону</label>
+                            <input type="tel" class="form-control" id="customerPhone" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="customerDescription" class="form-label fw-bold"
+                                data-key="booking_description_label">Що потрібно зробити?</label>
+                            <textarea class="form-control" id="customerDescription" rows="3" required></textarea>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-dark rounded-pill py-3 fw-bold"
+                                data-key="booking_submit_btn">Підтвердити бронювання</button>
+                        </div>
+                    </form>
+
+                    <!-- Success View -->
+                    <div id="bookingSuccess" class="text-center d-none">
+                        <div class="success-icon mb-3">
+                            <i class="ri-checkbox-circle-fill text-success" style="font-size: 4rem;"></i>
+                        </div>
+                        <h4 class="fw-bold mb-4" data-key="booking_success_title">Бронювання підтверджено!</h4>
+
+                        <div class="bg-light p-4 rounded-3 mb-4 text-start">
+                            <p class="mb-2"><strong><span data-key="booking_name_label">Ваше ім'я</span>:</strong> <span
+                                    id="summaryName"></span></p>
+                            <p class="mb-2"><strong><span data-key="booking_date_label">Оберіть дату</span>:</strong>
+                                <span id="summaryDate"></span>
+                            </p>
+                            <p class="mb-2"><strong><span data-key="booking_time_label">Оберіть час</span>:</strong>
+                                <span id="summaryTime"></span>
+                            </p>
+                            <p class="mb-2"><strong><span data-key="booking_phone_label">Номер телефону</span>:</strong>
+                                <span id="summaryPhone"></span>
+                            </p>
+                            <p class="mb-0"><strong><span data-key="booking_description_label">Що потрібно
+                                        зробити?</span>:</strong> <span id="summaryDescription"></span></p>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-dark rounded-pill py-3 fw-bold" data-bs-dismiss="modal"
+                                data-key="booking_done_btn">Готово</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="reviewModalLabel" data-key="review_modal_title">Написати відгук
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reviewForm">
+                        <div class="mb-3 text-center">
+                            <label class="form-label fw-bold d-block" data-key="review_rating_label">Ваша оцінка</label>
+                            <div class="rating-stars">
+                                <input type="radio" name="rating" id="star5" value="5"><label for="star5"><i
+                                        class="ri-star-fill"></i></label>
+                                <input type="radio" name="rating" id="star4" value="4"><label for="star4"><i
+                                        class="ri-star-fill"></i></label>
+                                <input type="radio" name="rating" id="star3" value="3"><label for="star3"><i
+                                        class="ri-star-fill"></i></label>
+                                <input type="radio" name="rating" id="star2" value="2"><label for="star2"><i
+                                        class="ri-star-fill"></i></label>
+                                <input type="radio" name="rating" id="star1" value="1"><label for="star1"><i
+                                        class="ri-star-fill"></i></label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewName" class="form-label fw-bold" data-key="review_name_label">Ваше
+                                ім'я</label>
+                            <input type="text" class="form-control" id="reviewName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewComment" class="form-label fw-bold" data-key="review_comment_label">Ваш
+                                відгук</label>
+                            <textarea class="form-control" id="reviewComment" rows="3" required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-dark rounded-pill py-3 fw-bold"
+                                data-key="review_submit_btn">Надіслати відгук</button>
+                        </div>
+                    </form>
+
+                    <!-- Success View -->
+                    <div id="reviewSuccess" class="text-center d-none">
+                        <div class="success-icon mb-3">
+                            <i class="ri-checkbox-circle-fill text-success" style="font-size: 4rem;"></i>
+                        </div>
+                        <h4 class="fw-bold mb-4" data-key="review_success_title">Дякуємо!</h4>
+                        <p class="text-muted" data-key="review_success_message">Ваш відгук успішно надіслано.</p>
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-dark rounded-pill py-3 fw-bold" data-bs-dismiss="modal"
+                                data-key="review_done_btn">Готово</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Price List Modal -->
+    <div class="modal fade" id="priceListModal" tabindex="-1" aria-labelledby="priceListModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="priceListModalLabel" data-key="price_list_modal_title">
+                        Прайс-лист</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td data-key="price_item_1">Укорочування джинсів/брюк</td>
+                                <td class="text-end fw-bold">~250-300 ₴</td>
+                            </tr>
+                            <tr>
+                                <td data-key="price_item_2">Заміна блискавки (куртка)</td>
+                                <td class="text-end fw-bold">~400 ₴</td>
+                            </tr>
+                            <tr>
+                                <td data-key="price_item_3">Штопка джинсів</td>
+                                <td class="text-end fw-bold">~250-300 ₴</td>
+                            </tr>
+                            <tr>
+                                <td data-key="price_item_4">Заміна підкладки (пальто)</td>
+                                <td class="text-end fw-bold">~600 ₴</td>
+                            </tr>
+                            <tr>
+                                <td data-key="price_item_5">Укоротити рукава</td>
+                                <td class="text-end fw-bold">~200-300 ₴</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center mt-3">
+                        <small class="text-muted" data-key="price_list_note">* Ціни є орієнтовними і можуть змінюватися
+                            залежно від складності.</small>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-dark rounded-pill w-100" data-bs-dismiss="modal"
+                        data-key="price_list_close_btn">Закрити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Modal -->
+    <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="quoteModalLabel" data-key="quote_modal_title">Отримати оцінку
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="quoteForm">
+                        <div class="mb-3">
+                            <label for="quoteName" class="form-label fw-bold" data-key="quote_name_label">Ваше
+                                ім'я</label>
+                            <input type="text" class="form-control" id="quoteName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quoteContact" class="form-label fw-bold" data-key="quote_contact_label">Телефон
+                                або Email</label>
+                            <input type="text" class="form-control" id="quoteContact" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quoteDescription" class="form-label fw-bold"
+                                data-key="quote_description_label">Опис проблеми</label>
+                            <textarea class="form-control" id="quoteDescription" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quoteImage" class="form-label fw-bold" data-key="quote_image_label">Фото
+                                (необов'язково)</label>
+                            <input type="file" class="form-control" id="quoteImage" accept="image/*">
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-dark rounded-pill py-3 fw-bold"
+                                data-key="quote_submit_btn">Отримати оцінку</button>
+                        </div>
+                    </form>
+
+                    <!-- Success View -->
+                    <div id="quoteSuccess" class="text-center d-none">
+                        <div class="success-icon mb-3">
+                            <i class="ri-checkbox-circle-fill text-success" style="font-size: 4rem;"></i>
+                        </div>
+                        <h4 class="fw-bold mb-4" data-key="quote_success_title">Запит надіслано!</h4>
+                        <p class="text-muted" data-key="quote_success_message">Ми зв'яжемося з вами протягом 48 годин.
+                        </p>
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-dark rounded-pill py-3 fw-bold" data-bs-dismiss="modal"
+                                data-key="quote_done_btn">Готово</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
